@@ -77,3 +77,21 @@ Démarrer Docker Desktop, puis dans WSL :
 - site : http://localhost:8000
 - PHPMyAdmin : http://localhost:8080
 - Mailpit : http://localhost:8025
+
+### Arrêter Docker manuellement
+
+Dans WSL, depuis le dossier du projet :
+
+    # arrêter les conteneurs sans les supprimer (redémarrage rapide avec "docker compose start")
+    docker compose stop
+
+    # arrêter et supprimer les conteneurs et le réseau (les données MariaDB sont conservées)
+    docker compose down
+
+    # vérifier qu'aucun conteneur du projet ne tourne
+    docker compose ps
+
+    # ATTENTION : supprime aussi le volume, donc toute la base de données
+    docker compose down -v
+
+Pour relancer ensuite : `docker compose up -d`. On peut aussi arrêter les conteneurs depuis Docker Desktop (onglet Containers, bouton Stop), puis quitter Docker Desktop.

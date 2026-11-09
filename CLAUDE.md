@@ -33,3 +33,9 @@ Claude ne peut pas créer de branches ni faire de commit lui-même.
 Il doit par contre documenter chaque modification dans le dossier `documentation-dev`
 - format : YYYY-MM-DD-HH-MM_description-courte.md
 - contenu minimal : date, fichiers modifiés ou créés, raisons, liste des agents utilisés
+
+## Mémoire partagée
+
+État d'avancement, décisions et pièges connus : à relire en début de session et à mettre à jour en fin de tâche.
+
+@.claude/MEMORY.md
