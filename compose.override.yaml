@@ -3,8 +3,20 @@ services:
 ###> doctrine/doctrine-bundle ###
   database:
     ports:
-      - "5432"
+      - "3306:3306"
 ###< doctrine/doctrine-bundle ###
+
+  # PHPMyAdmin (dev uniquement) : http://localhost:8080
+  phpmyadmin:
+    image: phpmyadmin:5
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
 
 ###> symfony/mailer ###
   mailer:

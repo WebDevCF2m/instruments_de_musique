@@ -22,7 +22,7 @@ Ce sera un site de présentation des instruments de musique de type bois (Clarin
 
 ## Architecture notes
 
-- **Frontend**: AssetMapper + importmap (`importmap.php`), node.js non nécessaire. point d'entrée `assets/app.js`; Stimulus controllers dans `assets/controllers/` (auto-registered via `assets/stimulus_bootstrap.js`), Turbo enabled. Templates dans `templates/` (Twig, étendu d'un `template.html.twwig` enfant de  `base.html.twig`).
+- **Frontend**: AssetMapper + importmap (`importmap.php`), node.js non nécessaire. point d'entrée `assets/app.js`; Stimulus controllers dans `assets/controllers/` (auto-registered via `assets/stimulus_bootstrap.js`), Turbo enabled. Templates dans `templates/` (Twig, étendu d'un `template.html.twig` enfant de  `base.html.twig`).
 - **Database**: Doctrine ORM 3 avec mapping d'attributs; `DATABASE_URL` dans `.env` en MariaDB.
 - **Services**: autowired/autoconfigured de `src/` (`config/services.yaml`); routes sont chargées par les attributs de contrôlleurs.
 - Langue par défaut du projet `en`; mais nous utiliserons en premier le `fr` via `translations/`.
