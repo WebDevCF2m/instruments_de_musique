@@ -76,4 +76,4 @@ Démarrer Docker Desktop, puis dans WSL :
 
 - site : http://localhost:8000
 - PHPMyAdmin : http://localhost:8080
-- Mailpit : `docker compose port mailer 8025`
+- Mailpit : http://localhost:8025
