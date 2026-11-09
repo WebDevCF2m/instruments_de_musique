@@ -9,16 +9,18 @@ Les agents sont définis dans `.claude/agents/`. Le modèle suit la difficulté 
 | moyenne | sonnet | `dev-symfony` | entités, migrations, contrôleurs, formulaires, CRUD, upload |
 | moyenne | sonnet | `integrateur-twig` | templates, composants UX, Stimulus, CSS |
 | moyenne | sonnet | `testeur` | tests PHPUnit |
+| difficile | opus | `designer` | charte graphique, variables CSS, maquettes, relecture visuelle |
 | difficile | opus | `architecte` | conception, modèle de données, sécurité, bugs difficiles (plan, sans modifier) |
 | difficile | opus | `relecteur` | relecture avant commit (sans modifier) |
 
 ## Enchaînement type d'une fonctionnalité
 
 1. `architecte` si la tâche est floue ou touche au modèle de données / à la sécurité.
-2. `dev-symfony` puis `integrateur-twig` (en parallèle si les fichiers ne se recouvrent pas) ; `traducteur` pour les textes.
-3. `testeur`.
-4. `relecteur`.
-5. `documentaliste` : fiche listant tous les agents utilisés.
+2. `designer` si la fonctionnalité ajoute une page ou un composant visuel (maquette + variables CSS).
+3. `dev-symfony` puis `integrateur-twig` (en parallèle si les fichiers ne se recouvrent pas) ; `traducteur` pour les textes.
+4. `testeur`.
+5. `relecteur`.
+6. `documentaliste` : fiche listant tous les agents utilisés.
 
 ## Règles
 
